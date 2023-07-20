@@ -1,9 +1,9 @@
+import pyperclip
+import pandas as pd
 from tkinter import Listbox
 import customtkinter
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("green")
-import pandas as pd
-import pyperclip
 
 class App(customtkinter.CTk):
     def __init__(self):
@@ -11,11 +11,12 @@ class App(customtkinter.CTk):
 
         # configure window
         self.title("Comparrow")
-        self.geometry(f"{2000}x{1500}+{0}+{0}")
-        self.state('zoomed')
+        self.geometry(f"{2050}x{700}+{0}+{0}")
+        # self.state('zoomed')
+        # self.attributes('-fullscreen', True)
 
-        # self.resizable(False, False)
-        self.iconbitmap("yin-yang.ico")
+        self.resizable(False, False)
+        # self.iconbitmap("yin-yang.ico")
         # self.bind("<Double-Shift_L>", lambda x: self.save_text())
         # self.bind("<Double-Shift_R>", lambda x: self.save_text())
 
@@ -27,44 +28,58 @@ class App(customtkinter.CTk):
         self.grid_rowconfigure(3, weight=1)
 
         # create main entry
-        self.entry = customtkinter.CTkEntry(self, placeholder_text="Enter an idea...", width=220, font=("Calibri Light", 20))
+        self.entry = customtkinter.CTkEntry(
+            self, placeholder_text="Enter an idea...", width=220, font=("Calibri Light", 20))
         self.entry.grid(column=0, row=0, pady=(10, 10))
         self.entry.bind("<Return>", lambda x: self.add_idea(self.entry))
 
         # create slider
-        self.slider = customtkinter.CTkSlider(self, from_=0, to=1, number_of_steps=5, state="disabled", button_color="white", width=220)
+        self.slider = customtkinter.CTkSlider(
+            self, from_=0, to=1, number_of_steps=5, state="disabled", button_color="white", width=220)
         self.slider.grid(column=1, row=0, pady=(10, 10))
         self.slider.set(0)
 
         # create a rerate button
-        self.rerate_button = customtkinter.CTkButton(self, text="Rerate", width=1, font=("Calibri Light", 20), command=self.rerate, fg_color="#141414", hover_color="#EC4E20")
-        self.rerate_button.grid(column=2, row=0, padx=(10, 10), pady=(10, 10), sticky="e")
+        self.rerate_button = customtkinter.CTkButton(self, text="Rerate", width=1, font=(
+            "Calibri Light", 20), command=self.rerate, fg_color="#141414", hover_color="#EC4E20")
+        self.rerate_button.grid(column=2, row=0, padx=(
+            10, 10), pady=(10, 10), sticky="e")
 
         # create save button
-        self.save_button = customtkinter.CTkButton(self, text="Save", width=1, font=("Calibri Light", 20), command=self.save, fg_color="#141414", hover_color="#EC4E20")
+        self.save_button = customtkinter.CTkButton(self, text="Save", width=1, font=(
+            "Calibri Light", 20), command=self.save, fg_color="#141414", hover_color="#EC4E20")
         self.save_button.grid(column=0, row=3, padx=(10, 10), sticky="w")
 
         # create listboxes
-        self.listbox1 = Listbox(self, activestyle="none", font=("Calibri Light", 20), background="#141414", selectbackground="#EC4E20", foreground="white", height=20, width=60)
-        self.listbox2 = Listbox(self, activestyle="none", font=("Calibri Light", 20), background="#141414", selectbackground="#EC4E20", foreground="white", height=20, width=60)
-        self.listbox3 = Listbox(self, activestyle="none", font=("Calibri Light", 20), background="#141414", selectbackground="#EC4E20", foreground="white", height=20, width=60)
+        self.listbox1 = Listbox(self, activestyle="none", font=(
+            "Calibri Light", 20), background="#141414", selectbackground="#EC4E20", foreground="white", height=20, width=60)
+        self.listbox2 = Listbox(self, activestyle="none", font=(
+            "Calibri Light", 20), background="#141414", selectbackground="#EC4E20", foreground="white", height=20, width=60)
+        self.listbox3 = Listbox(self, activestyle="none", font=(
+            "Calibri Light", 20), background="#141414", selectbackground="#EC4E20", foreground="white", height=20, width=60)
         self.listbox1.grid(column=0, row=1, sticky="n", padx=(5, 0))
         self.listbox2.grid(column=1, row=1, sticky="n", padx=(5, 5))
         self.listbox3.grid(column=2, row=1, sticky="n", padx=(0, 5))
         self.listbox1.bind("<Return>", lambda x: self.add_idea(self.listbox1))
         self.listbox2.bind("<Return>", lambda x: self.add_idea(self.listbox2))
-        self.listbox1.bind("<Double-BackSpace>", lambda x: self.remove_idea(self.listbox1))
-        self.listbox2.bind("<Double-BackSpace>", lambda x: self.remove_idea(self.listbox2))
-        self.listbox3.bind("<Double-BackSpace>", lambda x: self.remove_idea(self.listbox3))
+        self.listbox1.bind("<Double-BackSpace>",
+                           lambda x: self.remove_idea(self.listbox1))
+        self.listbox2.bind("<Double-BackSpace>",
+                           lambda x: self.remove_idea(self.listbox2))
+        self.listbox3.bind("<Double-BackSpace>",
+                           lambda x: self.remove_idea(self.listbox3))
         self.listbox1.bind("<Left>", lambda x: self.on_left(self.listbox1))
         self.listbox2.bind("<Left>", lambda x: self.on_left(self.listbox2))
         self.listbox3.bind("<Left>", lambda x: self.on_left(self.listbox3))
         self.listbox1.bind("<Right>", lambda x: self.on_right(self.listbox1))
         self.listbox2.bind("<Right>", lambda x: self.on_right(self.listbox2))
         self.listbox3.bind("<Right>", lambda x: self.on_right(self.listbox3))
-        self.listbox1.bind("<Double-Button-1>", lambda x: self.copy_idea(self.listbox1))
-        self.listbox2.bind("<Double-Button-1>", lambda x: self.copy_idea(self.listbox2))
-        self.listbox3.bind("<Double-Button-1>", lambda x: self.copy_idea(self.listbox3))
+        self.listbox1.bind("<Double-Button-1>",
+                           lambda x: self.copy_idea(self.listbox1))
+        self.listbox2.bind("<Double-Button-1>",
+                           lambda x: self.copy_idea(self.listbox2))
+        self.listbox3.bind("<Double-Button-1>",
+                           lambda x: self.copy_idea(self.listbox3))
 
         # create regular tkinter textboxes
         # self.textbox1 = Text(self, wrap="none", font=("Calibri Light", 15), background="#141414", foreground="white", width=80, height=20, selectbackground="#EC4E20", insertbackground="white")
@@ -173,7 +188,7 @@ class App(customtkinter.CTk):
             influence = list3_df["influence"][row]
             idea = list3_df["idea"][row]
             self.listbox3.insert("end", f"{cost}|{influence}|{idea}")
-        
+
         # textboxes
         # text1_df = pd.read_csv("data/text1.csv")
         # text2_df = pd.read_csv("data/text2.csv")
@@ -207,7 +222,8 @@ class App(customtkinter.CTk):
             idea = str(parts[2])
             list3_df.loc[row] = [cost, influence, idea]
         list2_df.sort_values(by=["cost"], ascending=False, inplace=True)
-        list3_df.sort_values(by=["cost", "influence"], ascending=[False, False], inplace=True)
+        list3_df.sort_values(by=["cost", "influence"], ascending=[
+                             False, False], inplace=True)
         list1_df.to_csv("data/list1.csv", index=False)
         list2_df.to_csv("data/list2.csv", index=False)
         list3_df.to_csv("data/list3.csv", index=False)
@@ -228,13 +244,21 @@ class App(customtkinter.CTk):
 
         # read the 3rd listbox
         list3_df = pd.DataFrame(columns=["cost", "influence", "idea"])
+        new_ideas = []
+
         for row in range(self.listbox3.size()):
             parts = self.listbox3.get(row).split("|")
             cost = int(parts[0])
             influence = int(parts[1])
             idea = str(parts[2])
             list3_df.loc[row] = [cost, influence, idea]
-            # put the tasks in the 1st listbox
+            new_ideas.append(idea)
+
+        # now remove the tasks from the 3rd listbox
+        self.listbox3.delete(0, "end")
+
+        # put the tasks in the 1st listbox
+        for idea in new_ideas:
             self.listbox1.insert("end", idea)
 
     def clear(self):
@@ -264,6 +288,7 @@ class App(customtkinter.CTk):
         # save text
         # self.save()
 
+
 if __name__ == "__main__":
-    app = App() 
+    app = App()
     app.mainloop()
