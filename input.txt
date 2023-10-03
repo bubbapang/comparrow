@@ -1,45 +1,53 @@
+ACTIONS
+    ~ Get out quick! = Get away. try ypao beach for the calming horizon, the awe
+    ~ inbox zero
+    ~ prescribed Brush + floss, 1 toof
+    ~ hug yourself and frame compassion temporally. older to younger advice
+    ~ daily stoic
+    ~ hang from a bar to grow taller through stretching
+    ~ active rest-ethic: relaxation vs recovery. these are different. REVISIT RIAN DORIS BINARY WORK_REST OSCILLATION. TIME COMPRESSION
+    breath work
+    cold therapy: how on guam? ocean?
+    heat therapy
+    massage, muscle tension, golf ball on foot, rolling out
+    meditation
+    exercise: anaerobic, aerobic
+    nature bathing, horizon awe
+    sleep
+    huberman 5
+    blueberries, kombucha, dark chocolate, kimchi, sourdough
+    fasting
 
-INFLUENTIAL
-Get out quick! = Get away. try ypao beach for the calming horizon, the awe, \\\ after washer dryer help dad
-prescribed Brush + floss, 1 toof, \\\ night
-
-1,1,eustress after mamas
-how? be on lookout for monday futsal
-
-1,1,"auto format comparrow. list down what i do: get rid of tildas, remove spaces, get rid of certain folder names, ///s, quotations, make sure certain folders are indented, get rid of 1,1s, archive listboxes 2 and 3"
-charge phone
-
-GENERAL
-~ protein (gram protein per my lbs. when can. singlish!) + VEGGIES || fast + Dishes = 1\\\ when i go out and am more hungers
-1,1,unclog ear
-1,1,Respond to nana and seb
-1,1,Check whatsapp
+QUESTIONS $
+    if i died today would i be satisfied with what i have planned for today? $ 
+    And how much am i impacting that? $ 
+    how am i cultivating an ecology of practices to learn to love wisely? To cultivate wisdom? $ how can i cultivate awe and perspective today? how can i be smaller and more grateful? $ why havent you killed yourself? $ how can i put in the time with good friends or making new friends? $ how can i apply the elon 5 step design process to my life? 1) your requirements are dumb 2) remove parts of process 3) simplify 4) accelerate cycle time 5) automate $ what do i want? and list first steps $ What would my younger and older self want for me? $ if i died what would i have regretted not doing? $ how am i doing with the huberman 5? $ what important truth do few people agree with you on? $ what did i learn from recent life? $ what might this look like if it were easy? $ how can i do this badly on purpose? to get started? whats the small next step? $ How could I be kinder to myself? $ what important company is noone building?
+    1,1,quantize routine
+    1,1,reconcile that im scared of rejection since i found these cool companies like an investor
+    1,1,ice machine + ice dunk bath = cold therapy. buy these if can find amazon
+    1,1,comparrow labels add an anxiety label a way to input the tasks copy and paste double click .exe file to start then the curated list of tasks copy to clipboard and viola!
+1,1,Send mama the list of things i wanted to send her 
+1,1,clean desk
+1,1,try UOG instead of infusion
+remove these too many quotations things with comparrow pandas
+git push the comparrow changes once done
+1,1,5pm nana organize closet. tell her about soccer ask her about 730 instead and how long itll take
 1,1,clean room
-1,1,disinfect electronics and bathrooms
-1,1,Help dad washer
-check out the vervake discord again
-quantize discord channels
+1,1,clean workout room
+1,1,dishes
+1,1,laundry
+1,1,help nana 5pm. tell her the infusion soccer situation. ask how long
+1,1,Check the nails discover statement
 
-FINANCE
 CAREER
-1,1,"sequence = apply to each, but with practicing with lower tech, lower stakes first"
-1,1,"check investors: founders fund, a16z"
-1,1,inbox zero
+1,1,"""go deep once you find the 8020 dont just spray and pray. go deep on the 8020 fit to the arena super well. karpathy needed? idi online?"""
+1,1,https://notionforms.io/forms/weeklyjobsearchreport
+1,1,"""check top job sources: YC otta"" new batch"
+1,1,"""sequence = apply to each but with practicing with lower tech lower stakes first"" "
 1,1,write a quick background bio for this = https://airtable.com/appcBCCmG0A4IeXlL/shrnNlddfkMnTrzAD
-1,1,8020 = sort them in coogan spreadsheet. tier list them
-1,1,leaf nodes: check new huntr board. import the tweet seeds to docs
-1,1,"execute = do it, scheduling in phone screens (give them a concise background and tell them my circumstances), tech interviews, behavioral interviews, offers, etc. plan with parents"
-1,1,lifo onetab
 1,1,quantize twitter feed
+1,1,"""execute = do it scheduling in phone screens (give them a concise background and tell them my circumstances) tech interviews behavioral interviews offers etc. plan with parents"""
 1,1,put homeostasis on github and resume
-1,1,"check top job sources: YC, otta"
 1,1,put activio on resume
-1,1,look through personal sites for job leads if needed.
-1,1,"recategorize career through tim's process: learn, 8020, sequence, execute"
-1,1,check career youtube folder
-1,1,compie good job sources and good investors
-1,1,quantize the coogan spreadsheet after huntr importing
-1,1,"go deep once you find the 8020, dont just spray and pray. go deep on the 8020 fit to the arena super well. karpathy needed? idi online?"
-compile all twitter seeds and continue parsing. archive the bads from last parse
-After location and size, go for team, then mission, then pay. 
-inbox zero, 
+1,1,leaf nodes: check new huntr board. import the tweet seeds to docs
+1,1,add an emotional component to comparrow. does this evoke anxiety?

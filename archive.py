@@ -8,13 +8,13 @@ def archive_csv_tasks(filename):
         for row in reader:
             tasks.append(row['idea'])
 
-    # Clear the CSV file
-    with open(filename, 'w') as file:
+    # Identify the headers in the CSV file
+    headers = reader.fieldnames
+
+    # Clear the CSV file, leaving the headers
+    with open(filename, 'w', newline='') as file:
         writer = csv.writer(file)
-        if 'cost' in tasks[0]:  # Check for the 'cost' field to determine the CSV file structure
-            writer.writerow(['cost', 'idea'])
-        else:
-            writer.writerow(['cost', 'influence', 'idea'])
+        writer.writerow(headers)
 
     return tasks
 
