@@ -3,7 +3,7 @@ import csv
 def archive_csv_tasks(filename):
     """Read tasks from a CSV file, return them as a list, and then clear the file."""
     tasks = []
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8', errors='replace') as file:
         reader = csv.DictReader(file)
         for row in reader:
             tasks.append(row['idea'])
@@ -12,7 +12,7 @@ def archive_csv_tasks(filename):
     headers = reader.fieldnames
 
     # Clear the CSV file, leaving the headers
-    with open(filename, 'w', newline='') as file:
+    with open(filename, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(headers)
 
@@ -20,10 +20,10 @@ def archive_csv_tasks(filename):
 
 def prepend_to_txt(filename, tasks):
     """Prepend tasks to the top of a text file."""
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         content = file.read()
 
-    with open(filename, 'w') as file:
+    with open(filename, 'w', encoding='utf-8') as file:
         for task in tasks:
             file.write(task + '\n')
         file.write(content)

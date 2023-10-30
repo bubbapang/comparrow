@@ -5,8 +5,9 @@ folders_to_remove = ['INFLUENTIAL', 'GENERAL', 'FINANCE', 'CAREER']
 # 1. Read a text file with a list of tasks.
 def read_file():
     # Open and read the content of 'input.txt'.
-    with open('input.txt', 'r') as f:
-        return f.read()
+    with open('data/input.txt', 'r', encoding='utf-8', errors='replace') as f:
+        file_content = f.read()
+    return file_content
 
 # 2. Format the file: remove empty lines and unwanted characters.
 def format_file(file_content):
@@ -41,9 +42,8 @@ def nest_tasks(formatted_file):
 
 # 4. Output the nested tasks to a new file.
 def write_file(nested_tasks):
-    with open('output.txt', 'w') as f:
+    with open('data/output.txt', 'w', encoding='utf-8') as f:  # specify UTF-8 encoding here
         for main_task, subtasks in nested_tasks.items():
-            # Write the main task and its subtasks, separated by a dollar sign.
             f.write(main_task)
             if subtasks:
                 f.write(' $ ' + ' $ '.join(subtasks))
