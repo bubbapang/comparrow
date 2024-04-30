@@ -1,3 +1,5 @@
 *.csv
 private
 .vscode
+input.txt
+output.txt
