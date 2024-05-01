@@ -98,6 +98,8 @@ class App(customtkinter.CTk):
             if idea != "":
                 self.listbox1.insert(0, idea)
                 self.entry.delete(0, "end")
+                print("Inserted in listbox1")
+                print("Listbox1 size:", self.listbox1.size())
         elif sender == self.listbox1:
             index = sender.curselection()
             if index:
@@ -105,10 +107,13 @@ class App(customtkinter.CTk):
                 idea = sender.get(index)
                 self.listbox2.insert(0, f"{cost}|{idea}")
                 self.listbox1.delete(sender.curselection())
-                if sender.get(index):
-                    self.listbox1.selection_set(index[0])
+                print("Inserted in listbox2")
+                print("Listbox2 size:", self.listbox2.size())
+                next_index = index[0]  # Next index to highlight
+                if next_index < self.listbox1.size():
+                    self.listbox1.selection_set(next_index)
                 else:
-                    self.listbox1.selection_set(index[0] - 1)
+                    self.listbox1.selection_set(next_index - 1)
         elif sender == self.listbox2:
             index = sender.curselection()
             if index:
@@ -118,13 +123,17 @@ class App(customtkinter.CTk):
                 idea = parts[1]
                 self.listbox3.insert(0, f"{cost}|{influence}|{idea}")
                 self.listbox2.delete(sender.curselection())
-                if sender.get(index):
-                    self.listbox2.selection_set(index[0])
+                print("Inserted in listbox3")
+                print("Listbox3 size:", self.listbox3.size())
+                next_index = index[0]  # Next index to highlight
+                if next_index < self.listbox2.size():
+                    self.listbox2.selection_set(next_index)
                 else:
-                    self.listbox2.selection_set(index[0] - 1)
+                    self.listbox2.selection_set(next_index - 1)
         self.save()
         self.clear()
         self.seed()
+
 
     def remove_idea(self, sender):
         if sender == self.listbox1:

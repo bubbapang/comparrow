@@ -20,13 +20,12 @@ def archive_csv_tasks(filename):
 
 def prepend_to_txt(filename, tasks):
     """Prepend tasks to the top of a text file."""
-    with open(filename, 'r') as file:
-        content = file.read()
-
-    with open(filename, 'w') as file:
+    # Open the file for writing with UTF-8 encoding
+    with open(filename, 'w', encoding='utf-8') as file:
+        # Encode tasks to bytes and write them to the file
         for task in tasks:
             file.write(task + '\n')
-        file.write(content)
+
 
 def main():
     # Archive tasks from CSV files

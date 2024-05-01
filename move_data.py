@@ -3,7 +3,7 @@ import pandas as pd
 df = pd.DataFrame(columns=["idea"])  # or create a new DataFrame if the csv does not exist
 
 # Read the output.txt file
-with open("output.txt", "r") as file:
+with open("output.txt", "r", encoding='utf-8') as file:
     lines = file.readlines()
 
 # Append new ideas into DataFrame
